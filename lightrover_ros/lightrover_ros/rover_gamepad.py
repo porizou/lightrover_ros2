@@ -25,8 +25,8 @@ class GamePad(Node):
     def callback(self, data):
         global speed
 
-        speed.linear.x = data.axes[1]*0.1
-        speed.angular.z = data.axes[2]*2.0
+        speed.linear.x = data.axes[1]*0.5
+        speed.angular.z = data.axes[0]*2.0
 
         self.publisher_.publish(speed)
 
